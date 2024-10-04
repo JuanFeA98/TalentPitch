@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: talentpitch-service
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-central1-docker.pkg.dev/rich-gift-437021-n6/talentpitch-final/talentpitch-final:latest
+          env:
+          ports:
+            - containerPort: 4000
